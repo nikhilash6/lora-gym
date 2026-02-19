@@ -150,4 +150,4 @@ This project builds on [musubi-tuner](https://github.com/kohya-ss/musubi-tuner) 
 
 ## License
 
-MIT
+Apache 2.0 — see [LICENSE](LICENSE) for details.
