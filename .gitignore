@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.env.local
+*.env
+venv/
+.venv/
+
+# API keys and secrets
+*secret*
+*token*
+!**/docs/*
+
+# Training artifacts
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+outputs/
+checkpoints/
+resume_checkpoints/
+
+# Datasets (user's own data — never commit)
+datasets/
+
+# Cached training data
+*.npz
+*_cache/
+latents_cache/
+text_encoder_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+wandb/

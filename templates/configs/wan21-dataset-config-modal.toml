@@ -1,0 +1,33 @@
+[general]
+caption_extension = ".txt"
+enable_bucket = true
+bucket_no_upscale = true
+
+# --- Still images ---
+[[datasets]]
+image_directory = "/datasets/datasets/annika/images"
+cache_directory = "/datasets/datasets/annika/images/cache"
+resolution = [720, 1280]
+batch_size = 1
+num_repeats = 1
+
+# --- Short video clips (high-res, 21 frames) ---
+[[datasets]]
+video_directory = "/datasets/datasets/annika/videos"
+cache_directory = "/datasets/datasets/annika/videos/cache_1"
+resolution = [1280, 720]
+batch_size = 1
+num_repeats = 1
+frame_extraction = "head"
+target_frames = [1, 21]
+
+# --- Longer video clips (medium-res, 45 frames) ---
+[[datasets]]
+video_directory = "/datasets/datasets/annika/videos"
+cache_directory = "/datasets/datasets/annika/videos/cache_2"
+resolution = [960, 544]
+batch_size = 1
+num_repeats = 1
+frame_extraction = "uniform"
+target_frames = [45]
+frame_sample = 2
