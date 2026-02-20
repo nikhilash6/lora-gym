@@ -144,7 +144,7 @@ For the full training methodology, MoE architecture deep-dive, empirical finding
 
 **[Minta](https://github.com/alvdansen)** — Pipeline lead. Extended the pipeline to RunPod and Thunder Compute, developed the Wan 2.2 MoE dual-expert training strategy, built the Lightning LoRA merge integration. Leads experimental validation and script development across all platforms. Co-author of the Control LoRA research brief.
 
-**[Timothy](https://github.com/timotheospaul)** — Developed the original Wan 2.1 LoRA training pipeline on Modal using musubi-tuner. Co-develops training methodology, hyperparameter strategy, and infrastructure decisions. Co-author of the Control LoRA via Late-Stage Injection research brief.
+**[Timothy](https://github.com/timm156)** — Developed the original Wan 2.1 LoRA training pipeline on Modal using musubi-tuner. Co-develops training methodology, hyperparameter strategy, and infrastructure decisions. Co-author of the Control LoRA via Late-Stage Injection research brief.
 
 ## Acknowledgments
 
