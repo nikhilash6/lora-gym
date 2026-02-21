@@ -1,0 +1,46 @@
+# wan22-dataset-config-local.toml
+# Dataset configuration for Wan 2.2 T2V LoRA training — LOCAL version
+#
+# EDIT THESE PATHS to point to your dataset.
+# Use forward slashes (/) even on Windows — Python and TOML handle them fine.
+#
+# Default layout (created by setup_local.py):
+#   local_training/
+#     datasets/
+#       your_character/
+#         images/        <- .png/.jpg + matching .txt captions
+#         videos/        <- .mp4 + matching .txt captions
+
+[general]
+caption_extension = ".txt"
+enable_bucket = true
+bucket_no_upscale = true
+
+# --- Still images ---
+[[datasets]]
+image_directory = "C:/path/to/local_training/datasets/your_character/images"
+cache_directory = "C:/path/to/local_training/datasets/your_character/images/cache"
+resolution = [720, 1280]
+batch_size = 1
+num_repeats = 1
+
+# --- Short video clips (high-res, 21 frames) ---
+[[datasets]]
+video_directory = "C:/path/to/local_training/datasets/your_character/videos"
+cache_directory = "C:/path/to/local_training/datasets/your_character/videos/cache_1"
+resolution = [1280, 720]
+batch_size = 1
+num_repeats = 1
+frame_extraction = "head"
+target_frames = [1, 21]
+
+# --- Longer video clips (medium-res, 45 frames) ---
+[[datasets]]
+video_directory = "C:/path/to/local_training/datasets/your_character/videos"
+cache_directory = "C:/path/to/local_training/datasets/your_character/videos/cache_2"
+resolution = [960, 544]
+batch_size = 1
+num_repeats = 1
+frame_extraction = "uniform"
+target_frames = [45]
+frame_sample = 2
